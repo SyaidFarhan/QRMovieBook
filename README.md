@@ -1,109 +1,92 @@
-🎟️ Cinema Ticket Booking System
+# 🎟️ Cinema Ticket Booking System
 
 A Python-based cinema ticket booking system that provides an end-to-end solution for managing user sign-up, movie and seat selection, booking, payment processing, and ticket validation with QR code integration.
 
-🚀 Features
+## 🚀 Features
 
-User Management: User registration and login functionality.
+- **User Management**: User registration and login functionality.  
+- **Location & Cinema Management**: Add cities, cinemas, and studios.  
+- **Movie Management**: Add and display movies based on cities and cinemas.  
+- **Seat Booking**: View seat availability and book seats.  
+- **Payment Processing**: Supports multiple payment methods (Cash, Card, E-Wallet).  
+- **QR Code Integration**: Generate QR codes for tickets and validate them using a camera.  
+- **Data Persistence**: Stores all data in an SQLite database.  
+- **Seating Chart**: Visual representation of available and booked seats.  
 
-Location & Cinema Management: Add cities, cinemas, and studios.
+## 🛠️ Tech Stack
 
-Movie Management: Add and display movies based on cities and cinemas.
+- **Programming Language**: Python  
+- **Database**: SQLite  
+- **Libraries**:
+  - `qrcode` for QR code generation
+  - `cv2` (OpenCV) for QR code scanning via the camera
+  - `pyzbar` for decoding QR codes
+  - `csv` for data management (optional)
 
-Seat Booking: View seat availability and book seats.
+## 🐂️ Database Structure
 
-Payment Processing: Supports multiple payment methods (Cash, Card, E-Wallet).
+### Tables
+- `users`: Stores user information.  
+- `locations`: Stores cinema locations.  
+- `cinemas`: Stores cinema details.  
+- `studios`: Stores studio details within cinemas.  
+- `movies`: Stores movie details.  
+- `seats`: Stores seat information for each movie.  
+- `bookings`: Stores booking details, including payment status.  
 
-QR Code Integration: Generate QR codes for tickets and validate them using a camera.
+## 🗈️ Setup Instructions
 
-Data Persistence: Stores all data in an SQLite database.
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/your-username/cinema-ticket-booking.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd cinema-ticket-booking
+   ```
+3. Install required libraries:
+   ```bash
+   pip install qrcode opencv-python pyzbar
+   ```
+4. Run the script to initialize the database:
+   ```bash
+   python ticket_booking.py
+   ```
 
-Seating Chart: Visual representation of available and booked seats.
+## 🎮 How to Use
 
-🛠️ Tech Stack
+### 1. User Registration & Login
+- Register a new user with a username, password, and phone number.  
+- Login with the registered credentials to access features.
 
-Programming Language: Python
+### 2. Add Movies and Locations
+Run the `setup_locations_and_movies()` function to populate the database with sample data.
 
-Database: SQLite
+### 3. Book Tickets
+- View available movies by city.  
+- Select a movie and view the seat chart.  
+- Choose your seats and confirm the booking.  
 
-Libraries:
+### 4. Complete Payment
+- Choose a payment method (Cash, Card, E-Wallet).  
+- Generate a QR code for your ticket upon successful payment.  
 
-qrcode for QR code generation
+### 5. Validate Ticket
+- Use a camera to scan the QR code and validate your ticket.
 
-cv2 (OpenCV) for QR code scanning via the camera
+## 🖼️ Screenshots
 
-pyzbar for decoding QR codes
+- **Seating Chart**:  
+  ![Seating Chart Example](#)
 
-csv for data management (optional)
+- **QR Code Ticket**:  
+  ![QR Code Example](#)
 
-🐂️ Database Structure
+## 🛡️ License
 
-Tables
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-users: Stores user information.
+## 🌟 Contribution
 
-locations: Stores cinema locations.
+Contributions are welcome! If you'd like to contribute, please fork the repository and submit a pull request.
 
-cinemas: Stores cinema details.
-
-studios: Stores studio details within cinemas.
-
-movies: Stores movie details.
-
-seats: Stores seat information for each movie.
-
-bookings: Stores booking details, including payment status.
-
-🗈️ Setup Instructions
-
-Clone this repository:
-
-git clone https://github.com/your-username/cinema-ticket-booking.git
-
-Navigate to the project directory:
-
-cd cinema-ticket-booking
-
-Install required libraries:
-
-pip install qrcode opencv-python pyzbar
-
-Run the script to initialize the database:
-
-python ticket_booking.py
-
-🎮 How to Use
-
-1. User Registration & Login
-
-Register a new user with a username, password, and phone number.
-
-Login with the registered credentials to access features.
-
-2. Add Movies and Locations
-
-Run the setup_locations_and_movies() function to populate the database with sample data.
-
-3. Book Tickets
-
-View available movies by city.
-
-Select a movie and view the seat chart.
-
-Choose your seats and confirm the booking.
-
-4. Complete Payment
-
-Choose a payment method (Cash, Card, E-Wallet).
-
-Generate a QR code for your ticket upon successful payment.
-
-5. Validate Ticket
-
-Use a camera to scan the QR code and validate your ticket.
-
-🖼️ Screenshots
-
-Seating Chart:
-
-QR Code Ticket:
